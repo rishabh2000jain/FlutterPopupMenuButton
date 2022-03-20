@@ -1,33 +1,9 @@
-<!-- 
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+import 'package:flutter/material.dart';
+import 'package:flutter_popup_menu_button/menu_direction.dart';
+import 'package:flutter_popup_menu_button/menu_icon.dart';
+import 'package:flutter_popup_menu_button/menu_item.dart';
+import 'package:flutter_popup_menu_button/popup_menu_button.dart';
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages). 
-
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages). 
--->
-
-FlutterPopupMenuButton is a widget used for a customizable popup menu button.
-
-## Features
-
-TODO: List what your package can do. Maybe include images, gifs, or videos.
-
-## Getting started
-
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
-
-## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
-
-```dart
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
@@ -48,7 +24,7 @@ class MyApp extends StatelessWidget {
               popupMenuSize: const Size(160,200),
               child: FlutterPopupMenuIcon(
                 key: GlobalKey(),
-                child: Icon(Icons.more_vert),
+                child: const Icon(Icons.more_vert),
               ),
               children: [
                 FlutterPopupMenuItem(
@@ -109,14 +85,4 @@ class MyApp extends StatelessWidget {
     );
   }
 
-
-
-
 }
-```
-
-## Additional information
-
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.

@@ -18,10 +18,9 @@ class FlutterPopupMenuButton extends StatefulWidget {
   final EdgeInsets? margin;
   ///custom painter can be used to draw custom shape.
   final CustomPainter? customPainter;
-  ///shiftX property can be used to shift the menu left and right.
-  ///case 1: if the direction is left and shiftX is 10 it widget will shift 10 pixels to right.
-  ///case 2: if the direction is right and shiftX is 10 it widget will shift 10 pixels to left.
-  ///and it is similar for shiftY on y axis.
+  ///shiftX property can be used to shift the menu on x axis.
+  ///shiftY property can be used to shift the menu on y axis.
+
   final int shiftX;
   final int shiftY;
   const FlutterPopupMenuButton(
@@ -93,21 +92,21 @@ late MenuDirection currDirection;
         (widget.direction != MenuDirection.top &&
             totalHeight <= _screenSize!.height)) {
       currDirection = MenuDirection.bottom;
-      return (_childWidgetOffset!.dy + _childWidgetRenderBox!.size.height+widget.shiftY);
+      return (_childWidgetOffset!.dy + _childWidgetRenderBox!.size.height)+widget.shiftY;
     }
     currDirection = MenuDirection.top;
-    return _childWidgetOffset!.dy -
-        (widget.popupMenuSize.height + _childWidgetRenderBox!.size.height - widget.shiftY);
+    return (_childWidgetOffset!.dy -
+        (widget.popupMenuSize.height + _childWidgetRenderBox!.size.height))+widget.shiftY;
   }
 
   double? _getLeftPosition() {
     if ((widget.direction == MenuDirection.left && _childWidgetOffset!.dx - widget.popupMenuSize.width >= 0)) {
-      return (_childWidgetOffset!.dx - widget.popupMenuSize.width+widget.shiftX);
+      return (_childWidgetOffset!.dx - widget.popupMenuSize.width)+widget.shiftX;
     }
     if (widget.direction == MenuDirection.right) {
-      return (_childWidgetOffset!.dx + _childWidgetRenderBox!.size.width - widget.shiftX);
+      return (_childWidgetOffset!.dx + _childWidgetRenderBox!.size.width )+ widget.shiftX;
     }
-    return _childWidgetOffset!.dx;
+    return (_childWidgetOffset!.dx-(widget.popupMenuSize.width*0.5- _childWidgetRenderBox!.size.width/2))+widget.shiftX;
   }
 
   Widget getMenu(){
