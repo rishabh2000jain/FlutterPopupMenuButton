@@ -14,18 +14,42 @@ and the Flutter guide for
 FlutterPopupMenuButton is a widget used for a customizable popup menu button.
 
 ## Features
+```html
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+<p>
+FlutterPopupMenuButton provides you a complete customizable popup menu button.
+In this package you have control of almost each and every thing like where to show the menu.
+It has <b>MenuDirection</b> enum to set your menu direction.
+</p>
+```
+
+```dart
+enum MenuDirection{
+  left,
+  right,
+  top,
+  bottom,
+  center,
+  none
+}
+```
+
+```html
+You can even draw custom shape for your menu using <b>CustomPainter class and provide painter to named parameter customPainter in FlutterPopupMenuButton widget</b>.  
+<b>Image Example</b>
+<img src="example/img1.png" height="100" width="70">
+```
 
 ## Getting started
+Just add dependency to your pubspec.yaml and you start using the package.
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+```yaml
+dependencies:
+    flutter:
+        sdk: flutter
 
-## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
+        flutter_popup_menu_button:
+```
 
 ```dart
 class MyApp extends StatelessWidget {
@@ -115,8 +139,3 @@ class MyApp extends StatelessWidget {
 }
 ```
 
-## Additional information
-
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
