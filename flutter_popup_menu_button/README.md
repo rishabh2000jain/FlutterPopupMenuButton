@@ -15,17 +15,11 @@ and the Flutter guide for
 FlutterPopupMenuButton is a widget used for a customizable popup menu button
 
 ## Features
-```html
-<html>
-<body>
-<p>
-    FlutterPopupMenuButton provides you a complete customizable popup menu button.<br>
-    In this package you have control of almost each and every thing like where to show the menu,how much to shift menu on x and y axis and giving fixed height to menu.<br>
-    It has <b>MenuDirection</b> enum to set your menu direction.
-</p>
-</body>
-</html>
-```
+
+FlutterPopupMenuButton provides you a complete customizable popup menu button.<br>
+In this package you have control of almost each and every thing like where to show the menu,how much to shift menu on x and y axis and giving fixed height to menu.<br>
+It has <b>MenuDirection</b> enum to set your menu direction.
+
 
 ```dart
 enum MenuDirection{
@@ -38,15 +32,11 @@ enum MenuDirection{
 }
 ```
 
-```html
-<html>
-<body>
+
 You can even draw custom shape for your menu using <b>CustomPainter</b> class and provide painter to named parameter customPainter in <b>FlutterPopupMenuButton</b> widget. <br>
 <br>
 <img src="example/img1.png" height="200" width="150">
-</body>
-</html>
-```
+
 
 ## Getting started
 Just add dependency to your pubspec.yaml and you can start using the package.
